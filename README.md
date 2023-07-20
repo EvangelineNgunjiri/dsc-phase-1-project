@@ -1,11 +1,12 @@
 # Microsoft-venture-into-the-movie-industry
+![image](https://github.com/EvangelineNgunjiri/dsc-phase-1-project/assets/133154189/b2ba97c1-089a-484b-8d38-07f040d4e759)
 
 # <span style="color: blue; font-size: 24px;">Overview</span>
 
 The project will primarily focus on the genres of movie films doing well in the industry at the Box Office. The goal is to provide the best recommendations to Microsoft for their new movie studio. As a result, this should guide Microsoft into making the most informed decisions through understanding of the films that are most popular in terms of performance in the industry. This will also bring in a competitive advantage into an already existing market.
 
 # <span style="color: blue; font-size: 24px;">Business Problem</span>
-
+![image](https://github.com/EvangelineNgunjiri/dsc-phase-1-project/assets/133154189/15bcfe78-79a0-4bea-9c80-ab57584cbc0f)
 Microsoft is considering venturing into the entertainment industry, specifically movie creation. However, it does not have full information necessary to enter into the industry and be successful. Therefore, the aim is to provide relevant data that enables the company to acquire insights into the popularity of various films in order to venture the market successfully.
 
 By the end of the analysis,one will be able to answer the following:
