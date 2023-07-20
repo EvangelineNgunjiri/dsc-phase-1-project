@@ -1,65 +1,125 @@
-# Phase 1 Project
+# Microsoft-venture-into-the-movie-industry
 
-You've made it all the way through the first phase of this course - take a minute to celebrate your awesomeness!
+# <span style="color: blue; font-size: 24px;">Overview</span>
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-1-project/master/awesome.gif)
+The project will primarily focus on the genres of movie films doing well in the industry at the Box Office. The goal is to provide the best recommendations to Microsoft for their new movie studio. As a result, this should guide Microsoft into making the most informed decisions through understanding of the films that are most popular in terms of performance in the industry. This will also bring in a competitive advantage into an already existing market.
 
-Now you will put your new skills to use with a large end-of-Phase project! This project should take 20 to 30 hours to complete.
+# <span style="color: blue; font-size: 24px;">Business Problem</span>
 
-## Project Overview
+Microsoft is considering venturing into the entertainment industry, specifically movie creation. However, it does not have full information necessary to enter into the industry and be successful. Therefore, the aim is to provide relevant data that enables the company to acquire insights into the popularity of various films in order to venture the market successfully.
 
-For this project, you will use exploratory data analysis to generate insights for a business stakeholder.
+By the end of the analysis,one will be able to answer the following:
+- Most profitable genres in the industry
+- Most popular production studios
+- Movies making most profits
+- Preferred languages to enhance inclusivity
 
-### Business Problem
+# <span style="color: blue; font-size: 24px;">Objectives</span>
 
-Microsoft sees all the big companies creating original video content and they want to get in on the fun. They have decided to create a new movie studio, but they don’t know anything about creating movies. You are charged with exploring what types of films are currently doing the best at the box office. You must then translate those findings into actionable insights that the head of Microsoft's new movie studio can use to help decide what type of films to create.
+The objectives of this project are:
+- Research current film trends and analyze box office success of various movie genres.
+- Identify the most profitable and popular movie genres in the market.
+- Develop a list of recommendations for Microsoft's new movie studio based on the research findings.
+- Present a comprehensive report of the research findings and recommendations to the head of the new movie studio.
 
-### The Data
+# <span style="color: blue; font-size: 24px;">Data Understanding</span>
 
-In the folder `zippedData` are movie datasets from:
 
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [IMDB](https://www.imdb.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
-* [TheMovieDB](https://www.themoviedb.org/)
-* [The Numbers](https://www.the-numbers.com/)
+In this project, we will work with movie datasets which will provide the following information:
+1. Movie titles
+2. Movie genre
+3. Year of production
+4. Runtime for each movie
+5. Domestic and foreign gross earnings
 
-It is up to you to decide what data from this to use and how to use it. If you want to make this more challenging, you can scrape websites or make API calls to get additional data. If you are feeling overwhelmed or behind (e.g. struggled with the Phase 1 Code Challenge), we recommend you use only the following data files:
+The data is contained in fie separate csv files
+1. imdb.title.basics: each record contains the movie title, genre, start year and run time
+2. bom.movie_gross: each record contains the movie title, start year, studio, gross and foreign earnings
+3. tn.movie_budgets.csv: each record contains movie ID, release date, movie title, production budget, domestic and foreign gross earnings in USD
+4. tmdb.movies.csv: each record contains genre IDs, original language and title, level of popularity, release date, movie title, vote averages and vote counts.
+5. title_ratings: each record contains the movie title, average ratings and number of votes.
 
-* imdb.title.basics
-* imdb.title.ratings
-* bom.movie_gross
+# <span style="color: blue; font-size: 24px;">Load the datasets</span>
 
-## Deliverables
 
-There are three deliverables for this project:
+Create a dataframes title_basics and movie_gross that represent the two CSV files. Use pandas methods to inspect the shape and other attributes of these dataframes.
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+# <span style="color: blue; font-size: 24px;">Data Cleaning</span>
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
+For data cleaning, I examined the structure of my dataset and dropped unnecessary columns and rows to ensure there are no missing values. Also i merged various datasets into a single one to make it easier to do analysis and correlations.
 
-### Key Points
+# <span style="color: blue; font-size: 24px;">Merging of Data frames</span>
 
-* **Your analysis should yield three concrete business recommendations.** The ultimate purpose of exploratory analysis is not just to learn about the data, but to help an organization perform better. Explicitly relate your findings to business needs by recommending actions that you think the business (Microsoft) should take.
+Creation of joins is necessary to ease analysis of data and investigate relationships.
 
-* **Communicating about your work well is extremely important.** Your ability to provide value to an organization - or to land a job there - is directly reliant on your ability to communicate with them about what you have done and why it is valuable. Create a storyline your audience (the head of Microsoft's new movie studio) can follow by walking them through the steps of your process, highlighting the most important points and skipping over the rest.
+# <span style="color: blue; font-size: 24px;">Analysis of the movie industry competitiveness</span>
 
-* **Use plenty of visualizations.** Visualizations are invaluable for exploring your data and making your findings accessible to a non-technical audience. Spotlight visuals in your presentation, but only ones that relate directly to your recommendations. Simple visuals are usually best (e.g. bar charts and line graphs), and don't forget to format them well (e.g. labels, titles).
+In the cells below, i am going to analyse the competitiveness of the existing movie industry based on the cleaned and merged data above. I will look into the profitability of different genres, profitability per studio, and the ratings of genres.
 
-## Getting Started
 
-Please start by reviewing this assignment, the rubric at the bottom of it, and the "Project Submission & Review" page. If you have any questions, please ask your instructor ASAP.
+# <span style="color: blue; font-size: 24px;">Budgeted domestic profit per movie</span>
 
-Next, we recommend you check out [the Phase 1 Project Templates and Examples repo](https://github.com/learn-co-curriculum/dsc-project-template) and use the MVP template for your project.
+![image](https://github.com/EvangelineNgunjiri/Microsoft-venture-into-the-movie-industry/assets/133154189/5b355e0c-12ee-4657-a5f0-a486347f2e0b)
 
-Alternatively, you can fork [the Phase 1 Project Repository](https://github.com/learn-co-curriculum/dsc-phase-1-project), clone it locally, and work in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
+### <span style="color: blue; font-size: 24px;">Observation</span>
 
-## Project Submission and Review
+From the graph above, the bars represent the budgeted profitability while the line graph represents the production cost for the top 10 profit making movies. 
+Beauty and the beast(an animation) is the number 1 profit making movie while shrek 2(also an animation) is number 10.
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
+# <span style="color: blue; font-size: 24px;">Analysis of movies with the highest production budget against their domestic and global earnings</span>
 
-## Summary
+In the cells below, i investigated the movies that cost the most to produce in order to check the correlation with their respective gross earnings.
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+![image](https://github.com/EvangelineNgunjiri/Microsoft-venture-into-the-movie-industry/assets/133154189/9fae2dbf-a0d7-4642-9e05-17b927b2d275)
+
+### <span style="color: blue; font-size: 24px;">Observation</span>
+ From the graph above, Avatar has the highest worldwide gross earnings despite have a lower production budget.
+ Dark Phoenix on the other hand, has the lowest worldwide gross earnings yet production budget is almost the same as that of the other movies. 
+
+ # <span style="color: blue; font-size: 24px;">Analysis of genre against number of votes</span>
+
+In the cells below, i shall analyse the popularity of genres against the number of votes.
+
+![image](https://github.com/EvangelineNgunjiri/Microsoft-venture-into-the-movie-industry/assets/133154189/77489cf9-b4c9-4073-85b9-3cc96661a678)
+
+### <span style="color: blue; font-size: 24px;">Observation</span>
+
+The top 3 most voted(most popular) genre of movies are (Action,Adventure, Sci-fi), (Action,Adventure, Fantasy) and (Adventure, Animation, Fantasy)
+
+The least voted genre of movies are (Comedy, Drama),(Comedy) and (Drama,Romance)
+
+# <span style="color: blue; font-size: 24px;">Analysis of earnings per production studio</span>
+
+In the cells below, i shall look into the domestic gross earned per studios currently existing in the industry.
+
+![image](https://github.com/EvangelineNgunjiri/Microsoft-venture-into-the-movie-industry/assets/133154189/315ea010-e2a1-486b-a9c8-4bbfd3ffa23f)
+
+### <span style="color: blue; font-size: 24px;">Observation</span>
+
+From the graph above, the top 3 gross earning studios are BV, P/DW and WB(NL)
+The bottom 3 gross earning studios are Par, MGM and Sum
+
+# <span style="color: blue; font-size: 24px;">Analysis of popularity of movies per language</span>
+
+In the cells below, i shall look at the popularity of movies in different languages.
+
+![image](https://github.com/EvangelineNgunjiri/Microsoft-venture-into-the-movie-industry/assets/133154189/e4de7a90-a325-4d3e-9a4a-6694ee4d9a4d)
+
+### <span style="color: blue; font-size: 24px;">Observation</span>
+
+It is necessary to diversify movie production to enhance inclusivity among people of different races and areas dominated by other languages apart from English. 
+From the graph above,besides English, the top 3 most popular languages are fr, ja, and es.
+The least 3 popular languages are sv,da and hi
+
+# <span style="color: blue; font-size: 24px;">Conclusion</span>
+
+
+**1. Diversify movie languages**- Apart from English dominated areas, there are other niche markets that are dominated by other langauges. It is important for the movie industries to prioritize inclusivity for all people and races.
+
+**2. Encourage audience feedback**- Microsoft can do this by asking the audience to rate the movies based on their preference or create a survey to enhance decision making.
+
+**3. Focus on popular genres**- Microsoft should emphasize production of popular genres, that is, those with high ratings or with the most vote counts.
+
+**4. Collaboration with successful production studios**- Microsoft should consider joining forces with the top earning production studios to create content that is popular to the audience.
+
+**5. Incorporate technology to their data analysis**- Microsoft should continue to implement and incorporate technology-based data anaysis to do current analysis and predictive modelling of data.
