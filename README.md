@@ -8,6 +8,8 @@ The project will primarily focus on the genres of movie films doing well in the 
 # <span style="color: blue; font-size: 24px;">Business Problem</span>
 ![image](https://github.com/EvangelineNgunjiri/dsc-phase-1-project/assets/133154189/15bcfe78-79a0-4bea-9c80-ab57584cbc0f)
 
+
+
 Microsoft is considering venturing into the entertainment industry, specifically movie creation. However, it does not have full information necessary to enter into the industry and be successful. Therefore, the aim is to provide relevant data that enables the company to acquire insights into the popularity of various films in order to venture the market successfully.
 
 By the end of the analysis,one will be able to answer the following:
